@@ -9,6 +9,7 @@ import ro.unibuc.hello.dto.CarDTO;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class CarService {
@@ -41,4 +42,11 @@ public class CarService {
 //	public List<Car> findAllByValabilitateParcareDesc() {
 //		return carsRepository.findAllByValabilitateParcareDesc();
 //	}
+
+	public List<Car> findAllByCityPrefix(String cityPrefix) {
+		return carsRepository.findAll().stream().filter((Car c) ->
+				c.numarInmatriculare.startsWith(cityPrefix)
+		).collect(Collectors.toList());
+	}
+
 }
