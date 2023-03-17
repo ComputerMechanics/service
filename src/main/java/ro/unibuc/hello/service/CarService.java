@@ -7,6 +7,7 @@ import ro.unibuc.hello.data.CarsRepository;
 import ro.unibuc.hello.data.InformationRepository;
 import ro.unibuc.hello.dto.CarDTO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -29,7 +30,13 @@ public class CarService {
 	}
 
 	public List<Car> findAllByValabilitateParcareIsLessThan60() {
-		return carsRepository.findAllByValabilitateParcareIsLessThan60();
+		List<Car> lessThan60 = new ArrayList<>();
+		List<Car> allPaid = findAllByParcarePlatita(true);
+		for (Car car : allPaid) {
+			if (Integer.parseInt(car.valabilitateParcare) <= 60)
+				lessThan60.add(car);
+		}
+		return lessThan60;
 	}
 //	public List<Car> findAllByValabilitateParcareDesc() {
 //		return carsRepository.findAllByValabilitateParcareDesc();
