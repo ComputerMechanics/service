@@ -38,4 +38,10 @@ public class CarController {
 	public ResponseEntity<Car> saveCar(@RequestBody Car car) {
 		return new ResponseEntity<>(carService.saveCar(car), HttpStatus.OK);
 	}
+
+	@GetMapping("/city-prefix")
+	@ResponseBody
+	public ResponseEntity<List<Car>> getByCityPrefix(@RequestParam(name="city") String cityPrefix) {
+		return ResponseEntity.ok(carService.findAllByCityPrefix(cityPrefix));
+	}
 }
