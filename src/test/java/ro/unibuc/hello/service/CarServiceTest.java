@@ -33,7 +33,7 @@ class CarServiceTest {
 
 
 	@Test
-	void test_findByNrInmatriculare() {
+	void test_findByNrInmatriculare1() {
 
 		String title = "B100ABC";
 		Car car1 = new Car("1","B100ABC", "60", "Audi", "A5", false);
