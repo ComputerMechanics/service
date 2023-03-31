@@ -30,7 +30,7 @@ public class CarController {
 
 	@GetMapping("/valabilitate-mica")
 	@ResponseBody
-	public List<Car> getParcarePlatita() {
+	public List<Car> getParcarePlatitaCuValabilitateMica() {
 		return carService.findAllByValabilitateParcareIsLessThan60();
 	}
 
