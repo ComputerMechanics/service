@@ -32,7 +32,7 @@ public class FindByNrPlateSteps {
 
     @Autowired
     protected RestTemplate restTemplate;
-    
+
 
     @Given("^the client calls /numar-inmatriculare?numar=B123ACS")
     public void the_client_issues_GET_car() {
