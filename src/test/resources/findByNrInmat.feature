@@ -1,4 +1,4 @@
-Feature: correct car is displayed on calling find car by number plate
+Feature: correct  car is displayed on calling find car by number plate
   Scenario: client makes call to GET /numar-inmatriculare?numar=B123ACS
     When the client calls /numar-inmatriculare?numar=B123ACS
     Then the client receives status code of 200

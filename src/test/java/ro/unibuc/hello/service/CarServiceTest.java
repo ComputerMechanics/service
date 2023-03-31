@@ -28,7 +28,7 @@ public class CarServiceTest {
 
         Assertions.assertEquals("60", car.getValabilitateParcare());
         Assertions.assertEquals("Audi", car.getMarca());
-        Assertions.assertEquals("A5", car.getModel());
+        Assertions.assertEquals("A5", car.getModel()); 
 
     }
 
