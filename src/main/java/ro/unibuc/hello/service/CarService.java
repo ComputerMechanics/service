@@ -7,7 +7,9 @@ import ro.unibuc.hello.data.CarsRepository;
 import ro.unibuc.hello.data.InformationRepository;
 import ro.unibuc.hello.dto.CarDTO;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class CarService {
